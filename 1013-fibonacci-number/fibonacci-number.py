@@ -5,8 +5,6 @@ class Solution(object):
         if n == 1:
             return 1
 
-        dp = [0] * (n+1)
-
         prev = 0
         cur = 1
 
