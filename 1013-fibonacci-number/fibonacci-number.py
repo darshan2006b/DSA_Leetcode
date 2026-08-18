@@ -1,11 +1,8 @@
 class Solution(object):
     def fib(self, n):
-        memo = {0:0,1:1}
-
-        def f(x):
-            if x in memo:
-                return memo[x]
-            else:
-                return f(x-1) + f(x-2)
-
-        return f(n)
+        if n == 0:
+            return 0
+        if n == 1:
+            return 1
+        else:
+            return self.fib(n-1) + self.fib(n-2)
