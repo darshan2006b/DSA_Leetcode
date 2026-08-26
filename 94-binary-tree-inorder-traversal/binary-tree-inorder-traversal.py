@@ -6,18 +6,17 @@
 #         self.right = right
 class Solution(object):
     def inorderTraversal(self, root):
+        ans = []
         stk = []
-        result = []
-        if not root:
-            return []
         cur = root
-        
+
         while cur or stk:
             while cur:
                 stk.append(cur)
                 cur = cur.left
+            
             cur = stk.pop()
-            result.append(cur.val)
+            ans.append(cur.val)
 
             cur = cur.right
-        return result         
+        return ans
