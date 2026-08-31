@@ -10,8 +10,8 @@ class Solution(object):
             while s[r] in sett:
                 sett.remove(s[l])
                 l += 1
-            g = r - l + 1
             sett.add(s[r])
+            g = r - l + 1
             longest = max(longest,g)
 
         return longest
